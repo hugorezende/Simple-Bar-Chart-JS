@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200,300,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <title>Easy Bar Chart</title>
+    <style>
+        html,
+        body {
+            font-family: 'Nunito', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="chart-wrap-box" style="min-height: 450px; margin:20px auto;">
+        <div style="margin-bottom: 50px;">
+            <h3 style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+
+        </div>
+        <div class="box-container" id="chart01" style="height: 300px; margin:20px 0;">
+        </div>
+    </div>
+
+</body>
+<script src="SimpleBarChart.js"></script>
+<script>
+
+    let data = [
+        {
+            "title": "innogy",
+            "value": 0
+        },
+        {
+            "title": "123 energie",
+            "value": 40
+        },
+        {
+            "title": "123 energie",
+            "value": 50
+        },
+        {
+            "title": "123 energie",
+            "value": 60,
+            "logo": 'https://logoipsum.com/logo/logo-12.svg'
+        },
+        {
+            "title": "123 energie",
+            "value": 75
+        },
+        {
+            "title": "123 energie",
+            "value": 70
+        },
+        {
+            "title": "123 energie",
+            "value": 95
+        }];
+
+
+    let container = document.getElementById('chart01');
+    startChart(container, data,
+        {
+            charWidth: 600,
+            charHeight: 300,
+            divisionsLines: 3,
+            maxVal: 100,
+            minVal: 0,
+        });
+
+
+    $(document).ready(function () {
+        setTimeout(function () { $('.bar').addClass("animation-to-up"); }, 1000);
+
+    })
+</script>
+
+</html>
