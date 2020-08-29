@@ -1,10 +1,8 @@
 /**
- * Resposive Enpal Charts
+ * Simple-Bar-Chart-JS
  *
  * @author Hugo Rezende <hugorezendedev@gmail.com>
  *
- * Created at     : 2020-08-28 16:28:36
- * Last modified  : 2020-08-28 17:00:36
  */
 
 function startChart(element, data, options) {
